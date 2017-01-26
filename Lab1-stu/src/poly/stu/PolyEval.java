@@ -15,11 +15,16 @@ public class PolyEval {
         return sum;
     }
 
+    /**
+     *
+     * @param poly
+     * @return
+     */
     public static boolean isZero(ArrayList<Integer> poly) {
-        boolean flag = true;
+        boolean flag = false;
         for (int i = 0; i < poly.size(); i++) {
-            flag = flag && (poly.get(i) != 0);
+            flag = flag || (poly.get(i) != 0);
         }
-        return flag;
+        return !flag;
     }
 }

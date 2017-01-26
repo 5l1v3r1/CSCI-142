@@ -10,10 +10,17 @@ public class PolyRoot {
     public static final int MAX_ITERATIONS = 100;
 
     public static double computeRoot(ArrayList<Integer> poly) {
-
+            return newtonsMethod(poly, INITIAL_GUESS, 0);
     }
 
     private static double newtonsMethod(ArrayList<Integer> poly, double x0, int iter) {
+        double result = PolyEval.evaluate(poly, x0);
 
+        if (iter >= MAX_ITERATIONS || Math.abs(result) <= EPSILON) {
+            return x0;
+        }
+
+        double x1 = x0 - PolyEval.evaluate(poly, x0) / PolyEval.evaluate(PolyDerive.computeDerivative(poly), x0);
+        return newtonsMethod(poly, x1, iter + 1);
     }
 }
