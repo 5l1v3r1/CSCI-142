@@ -1,7 +1,7 @@
-import poly.stu.PolyString;
-import poly.stu.PolyEval;
 import poly.stu.PolyDerive;
+import poly.stu.PolyEval;
 import poly.stu.PolyRoot;
+import poly.stu.PolyString;
 
 import java.util.ArrayList;
 import java.util.Scanner;

@@ -15,7 +15,8 @@
  *************************************************************************/
 
 package turtle;
-import java.awt.Color;
+
+import java.awt.*;
 
 /**
  * A turtle graphics library built on StdDraw.
