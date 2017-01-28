@@ -1,4 +1,5 @@
 package poly.stu;
+
 import java.util.ArrayList;
 
 /**
@@ -16,7 +17,6 @@ public class PolyEval {
     }
 
     /**
-     *
      * @param poly
      * @return
      */
