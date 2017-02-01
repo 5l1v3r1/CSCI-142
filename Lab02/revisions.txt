@@ -1,5 +1,0 @@
-commit 1f1938ef21778e251d94f8fc3b17dc755151c1ac
-Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
-Date:   Tue Jan 31 15:05:20 2017 -0500
-
-    Initial commit
