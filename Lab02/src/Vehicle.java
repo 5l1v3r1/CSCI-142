@@ -11,40 +11,43 @@ public class Vehicle {
 
     /**
      * The main method runs a suite of test cases for the Vehicle class.
-     *      <br>
-     *      Step 1.  Stub out all the methods of the Vehicle class.  Use the
-     *          javadocs to get method signatures.  For methods that return
-     *          objects, return null.  For methods that return a boolean,
-     *          return false.  For methods that return an integer, return 0.<br>
-     *      <br><br>
-     *      Step 2.  Run the program and it should fail every test.
-     *      <br><br>
-     *      Step 3.  Implement the Vehicle methods in the following order.  Use the
-     *          UML diagram and javadocs to assist you.  After writing each method you
-     *          should rerun the test method to make sure it produces the correct output.<br>
-     *      <br><br>
-     *              1. Add the private state and implement the constructor.<br>
-     *              2. Implement getPlate()<br>
-     *              3. Implement isParked()<br>
-     *              4. Implement hasPermit()<br>
-     *              5. Implement getPermit()<br>
-     *              6. Implement getTickets()<br>
-     *              7. Implement toString()<br>
-     *              8. Implement setParked()<br>
-     *              9. Implement equals()<br>
-     *              10. Implement setPermit()<br>
-     *              11. Implement giveTicket()<br>
-     *      <br><br>
-     *           It is expected that each test should produce "OK" for output.
+     * <br>
+     * Step 1.  Stub out all the methods of the Vehicle class.  Use the
+     * javadocs to get method signatures.  For methods that return
+     * objects, return null.  For methods that return a boolean,
+     * return false.  For methods that return an integer, return 0.<br>
+     * <br><br>
+     * Step 2.  Run the program and it should fail every test.
+     * <br><br>
+     * Step 3.  Implement the Vehicle methods in the following order.  Use the
+     * UML diagram and javadocs to assist you.  After writing each method you
+     * should rerun the test method to make sure it produces the correct output.<br>
+     * <br><br>
+     * 1. Add the private state and implement the constructor.<br>
+     * 2. Implement getPlate()<br>
+     * 3. Implement isParked()<br>
+     * 4. Implement hasPermit()<br>
+     * 5. Implement getPermit()<br>
+     * 6. Implement getTickets()<br>
+     * 7. Implement toString()<br>
+     * 8. Implement setParked()<br>
+     * 9. Implement equals()<br>
+     * 10. Implement setPermit()<br>
+     * 11. Implement giveTicket()<br>
+     * <br><br>
+     * It is expected that each test should produce "OK" for output.
+     *
      * @param args command line arguments (unused)
      */
 
     private int plate;
     private boolean parked;
     private Permit permit;
-    private ArrayList<Ticket> tickets = new ArrayList<Ticket>();
+    private ArrayList<Ticket> tickets;
 
     public Vehicle(int plate) {
+        this.tickets = new ArrayList<Ticket>();
+        this.permit = null;
         this.plate = plate;
     }
 
@@ -93,7 +96,7 @@ public class Vehicle {
                 ", permit=" + this.permit +
                 ", parked=" + this.parked +
                 ", tickets=" + this.tickets +
-        "}";
+                "}";
     }
 
     public static void main(String[] args) {
@@ -119,8 +122,8 @@ public class Vehicle {
         // check's Vehicle's toString(), you should get:
         //      Vehicle{plate=10, permit=null, parked=false, tickets=[]}
         System.out.println("v1 toString?: " +
-            (v1.toString() != null && v1.toString().equals("Vehicle{plate=10, permit=null, parked=false, tickets=[]}") ?
-                    "OK" : "FAIL, got: " + v1.toString()));
+                (v1.toString() != null && v1.toString().equals("Vehicle{plate=10, permit=null, parked=false, tickets=[]}") ?
+                        "OK" : "FAIL, got: " + v1.toString()));
 
         // create a second Vehicle v2, whose plate number is 20, park it, test
         // it is parked and then its toString(), you should get:
