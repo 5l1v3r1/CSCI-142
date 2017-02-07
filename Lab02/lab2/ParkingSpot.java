@@ -90,7 +90,7 @@ public class ParkingSpot {
      * Have a vehicle take this spot and become parked.
      *
      * @param vehicle - the vehicle to occupy the spot
-     * @pre.rit there is no vehicle in the spot
+     * @rit.pre there is no vehicle in the spot
      */
     public void occupySpot(Vehicle vehicle) {
         vehicle.setParked(true);
@@ -100,7 +100,7 @@ public class ParkingSpot {
     /**
      * Have a vehicle leave a spot and become unparked.
      *
-     * @pre.rit there is a vehicle in the spot
+     * @rit.pre there is a vehicle in the spot
      */
     public void vacateSpot() {
         this.vehicle.setParked(false);

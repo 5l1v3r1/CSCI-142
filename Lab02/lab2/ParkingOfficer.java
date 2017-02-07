@@ -40,7 +40,7 @@ public class ParkingOfficer {
      * @param vehicle the vehicle (with or without a permit)
      * @param spot    the spot
      * @return the fine for parking in that spot, Fine.NO_FINE if there is none
-     * @pre.rit the parking lot has been created, the vehicle has been created, the parking spot is in range
+     * @rit.pre the parking lot has been created, the vehicle has been created, the parking spot is in range
      */
     public static Fine getFineVehicleSpot(Vehicle vehicle, ParkingSpot spot) {
         Permit vehiclePermit = vehicle.getPermit();
@@ -67,7 +67,7 @@ public class ParkingOfficer {
      * Connect the parking officer to the parking lot they will be responsible for patrolling.
      *
      * @param lot the parking lot
-     * @pre.rit the lot has already been created (is not null)
+     * @rit.pre the lot has already been created (is not null)
      */
     public void setParkingLot(ParkingLot lot) {
         this.lot = lot;
@@ -90,7 +90,7 @@ public class ParkingOfficer {
      * @param vehicle the vehicle to get the ticket
      * @param spot    the spot number
      * @param fine    the fine
-     * @pre.rit the vehicle exists, there is a fine (not Fine.NO_FINE)
+     * @rit.pre the vehicle exists, there is a fine (not Fine.NO_FINE)
      */
     private void issueTicket(Vehicle vehicle, int spot, Fine fine) {
         Ticket t = new Ticket(vehicle.getPlate(), fine);

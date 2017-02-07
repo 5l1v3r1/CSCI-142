@@ -1,3 +1,21 @@
+commit 7baeeaa3cfbdd4e5c8494a1e1f25c7f5d3ef9053
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Feb 7 15:27:44 2017 -0500
+
+    Modify javadocs tags
+
+commit 8b1fd5e27f0acba8799f7d2da667e2fd14fa4bc6
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Feb 7 01:16:27 2017 -0500
+
+    Modify zip for submission
+
+commit 682a21e933190d9e2ec10c96c057899ca08c812b
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Feb 7 01:12:35 2017 -0500
+
+    Finalize Lab02
+
 commit 34b5e00eb76b867d68189e464f452d428ebc2154
 Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
 Date:   Tue Feb 7 01:09:52 2017 -0500

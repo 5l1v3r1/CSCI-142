@@ -53,7 +53,7 @@ public class ParkingLot {
      * @param handicappedSpots number of handicapped spots
      * @param reservedSpots    number of reserved spots
      * @param generalSpots     number of general spots
-     * @pre.rit the number of spots for each kind is non-negative
+     * @rit.pre the number of spots for each kind is non-negative
      */
     public ParkingLot(int handicappedSpots, int reservedSpots, int generalSpots) {
         this.handicappedSpots = handicappedSpots;
@@ -118,7 +118,7 @@ public class ParkingLot {
      *
      * @param spot the spot number
      * @return the spot
-     * @pre.rit spot is within the range of the lot
+     * @rit.pre spot is within the range of the lot
      */
     public ParkingSpot getSpot(int spot) {
         return this.lot.get(spot);
@@ -129,7 +129,7 @@ public class ParkingLot {
      *
      * @param spot the spot to check
      * @return true if the spot is open, false otherwise
-     * @pre.rit the spot is within the range of the lot
+     * @rit.pre the spot is within the range of the lot
      */
     public boolean isSpotVacant(int spot) {
         return (getSpot(spot).getVehicle() == null);
@@ -141,7 +141,7 @@ public class ParkingLot {
      * @param vehicle the vehicle to park
      * @param spot    the spot to park in
      * @return whether the vehicle was parked in this spot or not
-     * @pre.rit the spot is within the range of the lot, the vehicle exists and is not already parked
+     * @rit.pre the spot is within the range of the lot, the vehicle exists and is not already parked
      */
     public boolean parkVehicle(Vehicle vehicle, int spot) {
         if (!isSpotVacant(spot)) {
@@ -158,7 +158,7 @@ public class ParkingLot {
      *
      * @param vehicle the vehicle to remove
      * @return the spot the vehicle was removed from. if the vehicle was not parked in the lot it returns ILLEGAL_SPOT.
-     * @pre.rit the vehicle exists
+     * @rit.pre the vehicle exists
      */
     public int removeVehicle(Vehicle vehicle) {
         int spot = ILLEGAL_SPOT;
