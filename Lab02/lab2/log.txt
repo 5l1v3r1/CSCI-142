@@ -1,0 +1,53 @@
+commit 34b5e00eb76b867d68189e464f452d428ebc2154
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Feb 7 01:09:52 2017 -0500
+
+    Add testcases to each class
+
+commit f91cbdad98d2ddd63c557c13d4d53cb0450c84e8
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Mon Feb 6 02:24:58 2017 -0500
+
+    Add ParkingOfficer class and main program
+
+commit d909a96fe86707de0871afa6b3ac6ccac79433a3
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Mon Feb 6 00:49:36 2017 -0500
+
+    Add ParkingLot class
+
+commit 16c729aecb8fb6b1a0514d02d93749600186b468
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Sun Feb 5 22:19:12 2017 -0500
+
+    Add ParkingSpot class
+
+commit c7cf5c2f35faeaff928b325b35df916412673f37
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Jan 31 23:02:36 2017 -0500
+
+    ..
+
+commit c71657d1822445fce93ad462978d6aec55bfc496
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Jan 31 22:58:11 2017 -0500
+
+    .
+
+commit a083fcae1bbab496cad0e02a9de1ca571d4898d5
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Jan 31 15:46:02 2017 -0500
+
+    Add files and Vehicle class implementation
+
+commit c1a02891e310a31a349263948a3cfeedc941f6a9
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Jan 31 15:45:21 2017 -0500
+
+    Add Vehicle class implementation
+
+commit 1f1938ef21778e251d94f8fc3b17dc755151c1ac
+Author: ducphanduyagentp <ducphanduy.agentp@gmail.com>
+Date:   Tue Jan 31 15:05:20 2017 -0500
+
+    Initial commit

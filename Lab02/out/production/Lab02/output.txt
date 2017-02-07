@@ -1,0 +1,172 @@
+> help
+- create lot #handicapped #reserved #general
+	create a new lot with the different spots
+- display lot
+	print out the lot
+- display vehicles
+	print out all vehicles created
+- get spot #
+	get the vehicle in spot (if one exists)
+- help
+	this help message
+- issue permit # vehicle #
+	issue a previously created permit by id to a vehicle by plate
+- make vehicle #
+	create a new vehicle by plate
+- park vehicle # spot #
+	park a vehicle by plate in a spot by id
+- patrol lot
+	have officer patrol lot and issue tickets
+- remove vehicle #
+	remove parked vehicle from lot by plate
+- quit
+	end the simulation
+> create lot 4 26 70
+00:H 01:H 02:H 03:H 04:R 05:R 06:R 07:R 08:R 09:R
+10:R 11:R 12:R 13:R 14:R 15:R 16:R 17:R 18:R 19:R
+20:R 21:R 22:R 23:R 24:R 25:R 26:R 27:R 28:R 29:R
+30:G 31:G 32:G 33:G 34:G 35:G 36:G 37:G 38:G 39:G
+40:G 41:G 42:G 43:G 44:G 45:G 46:G 47:G 48:G 49:G
+50:G 51:G 52:G 53:G 54:G 55:G 56:G 57:G 58:G 59:G
+60:G 61:G 62:G 63:G 64:G 65:G 66:G 67:G 68:G 69:G
+70:G 71:G 72:G 73:G 74:G 75:G 76:G 77:G 78:G 79:G
+80:G 81:G 82:G 83:G 84:G 85:G 86:G 87:G 88:G 89:G
+90:G 91:G 92:G 93:G 94:G 95:G 96:G 97:G 98:G 99:G
+Vacant Spots: 100
+> make vehicle 0
+Vehicle{plate=0, permit=null, parked=false, tickets=[]}
+> create permit 0 RESERVED
+Permit{id=0, type=RESERVED}
+> issue permit 0 vehicle 0
+Vehicle{plate=0, permit=Permit{id=0, type=RESERVED}, parked=false, tickets=[]}
+> make vehicle 1
+Vehicle{plate=1, permit=null, parked=false, tickets=[]}
+> create permit 1 HANDICAPPED
+Permit{id=1, type=HANDICAPPED}
+> issue permit 1 vehicle 1
+Vehicle{plate=1, permit=Permit{id=1, type=HANDICAPPED}, parked=false, tickets=[]}
+> make vehicle 2
+Vehicle{plate=2, permit=null, parked=false, tickets=[]}
+> make vehicle 3
+Vehicle{plate=3, permit=null, parked=false, tickets=[]}
+> make vehicle 4
+Vehicle{plate=4, permit=null, parked=false, tickets=[]}
+> create permit 4 HANDICAPPED
+Permit{id=4, type=HANDICAPPED}
+> issue permit 4 vehicle 4
+Vehicle{plate=4, permit=Permit{id=4, type=HANDICAPPED}, parked=false, tickets=[]}
+> make vehicle 5
+Vehicle{plate=5, permit=null, parked=false, tickets=[]}
+> create permit 5 HANDICAPPED
+Permit{id=5, type=HANDICAPPED}
+> issue permit 5 vehicle 5
+Vehicle{plate=5, permit=Permit{id=5, type=HANDICAPPED}, parked=false, tickets=[]}
+> make vehicle 6
+Vehicle{plate=6, permit=null, parked=false, tickets=[]}
+> create permit 6 RESERVED
+Permit{id=6, type=RESERVED}
+> issue permit 6 vehicle 6
+Vehicle{plate=6, permit=Permit{id=6, type=RESERVED}, parked=false, tickets=[]}
+> park vehicle 0 spot 2
+Vehicle 0 is parked illegaly! Vehicle permit is RESERVED and parking spot is HANDICAPPED
+> park vehicle 1 spot 2
+Unable to park vehicle 1 in spot 2
+> park vehicle 1 spot 0
+Vehicle 1 is parked legally. Vehicle permit is HANDICAPPED and parking spot is HANDICAPPED
+> park vehicle 2 spot 18
+Vehicle 2 is parked illegaly! Vehicle permit is null and parking spot is RESERVED
+> park vehicle 3 spot 40
+Vehicle 3 is parked illegaly! Vehicle permit is null and parking spot is GENERAL
+> park vehicle 4 spot 44
+Vehicle 4 is parked legally. Vehicle permit is HANDICAPPED and parking spot is GENERAL
+> park vehicle 5 spot 42
+Vehicle 5 is parked legally. Vehicle permit is HANDICAPPED and parking spot is GENERAL
+> park vehicle 6 spot 57
+Vehicle 6 is parked legally. Vehicle permit is RESERVED and parking spot is GENERAL
+> display lot
+00:* 01:H 02:* 03:H 04:R 05:R 06:R 07:R 08:R 09:R
+10:R 11:R 12:R 13:R 14:R 15:R 16:R 17:R 18:* 19:R
+20:R 21:R 22:R 23:R 24:R 25:R 26:R 27:R 28:R 29:R
+30:G 31:G 32:G 33:G 34:G 35:G 36:G 37:G 38:G 39:G
+40:* 41:G 42:* 43:G 44:* 45:G 46:G 47:G 48:G 49:G
+50:G 51:G 52:G 53:G 54:G 55:G 56:G 57:* 58:G 59:G
+60:G 61:G 62:G 63:G 64:G 65:G 66:G 67:G 68:G 69:G
+70:G 71:G 72:G 73:G 74:G 75:G 76:G 77:G 78:G 79:G
+80:G 81:G 82:G 83:G 84:G 85:G 86:G 87:G 88:G 89:G
+90:G 91:G 92:G 93:G 94:G 95:G 96:G 97:G 98:G 99:G
+Vacant Spots: 93
+> display vehicles
+Vehicle{plate=0, permit=Permit{id=0, type=RESERVED}, parked=true, tickets=[]}
+Vehicle{plate=1, permit=Permit{id=1, type=HANDICAPPED}, parked=true, tickets=[]}
+Vehicle{plate=2, permit=null, parked=true, tickets=[]}
+Vehicle{plate=3, permit=null, parked=true, tickets=[]}
+Vehicle{plate=4, permit=Permit{id=4, type=HANDICAPPED}, parked=true, tickets=[]}
+Vehicle{plate=5, permit=Permit{id=5, type=HANDICAPPED}, parked=true, tickets=[]}
+Vehicle{plate=6, permit=Permit{id=6, type=RESERVED}, parked=true, tickets=[]}
+> patrol lot
+Issuing ticket to: Vehicle{plate=0, permit=Permit{id=0, type=RESERVED}, parked=true, tickets=[Ticket{id=1, time=Tue Feb 07 00:39:09 EST 2017, plate=0, fine=PARKING_HANDICAPPED, amount=100}]} in spot 2 for PARKING_HANDICAPPED
+Issuing ticket to: Vehicle{plate=2, permit=null, parked=true, tickets=[Ticket{id=2, time=Tue Feb 07 00:39:09 EST 2017, plate=2, fine=PARKING_RESERVED, amount=50}]} in spot 18 for PARKING_RESERVED
+Issuing ticket to: Vehicle{plate=3, permit=null, parked=true, tickets=[Ticket{id=3, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=NO_PERMIT, amount=30}]} in spot 40 for NO_PERMIT
+> display tickets
+Ticket{id=1, time=Tue Feb 07 00:39:09 EST 2017, plate=0, fine=PARKING_HANDICAPPED, amount=100}
+Ticket{id=2, time=Tue Feb 07 00:39:09 EST 2017, plate=2, fine=PARKING_RESERVED, amount=50}
+Ticket{id=3, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=NO_PERMIT, amount=30}
+> get spot 0
+Vehicle{plate=1, permit=Permit{id=1, type=HANDICAPPED}, parked=true, tickets=[]}
+> get spot 1
+No vehicle in spot 1!
+> get spot 2
+Vehicle{plate=0, permit=Permit{id=0, type=RESERVED}, parked=true, tickets=[Ticket{id=1, time=Tue Feb 07 00:39:09 EST 2017, plate=0, fine=PARKING_HANDICAPPED, amount=100}]}
+> get spot 18
+Vehicle{plate=2, permit=null, parked=true, tickets=[Ticket{id=2, time=Tue Feb 07 00:39:09 EST 2017, plate=2, fine=PARKING_RESERVED, amount=50}]}
+> remove vehicle 0
+Vehicle with plate 0 was removed from spot 2
+Vehicle{plate=0, permit=Permit{id=0, type=RESERVED}, parked=false, tickets=[Ticket{id=1, time=Tue Feb 07 00:39:09 EST 2017, plate=0, fine=PARKING_HANDICAPPED, amount=100}]}
+> remove vehicle 1
+Vehicle with plate 1 was removed from spot 0
+Vehicle{plate=1, permit=Permit{id=1, type=HANDICAPPED}, parked=false, tickets=[]}
+> remove vehicle 2
+Vehicle with plate 2 was removed from spot 18
+Vehicle{plate=2, permit=null, parked=false, tickets=[Ticket{id=2, time=Tue Feb 07 00:39:09 EST 2017, plate=2, fine=PARKING_RESERVED, amount=50}]}
+> remove vehicle 3
+Vehicle with plate 3 was removed from spot 40
+Vehicle{plate=3, permit=null, parked=false, tickets=[Ticket{id=3, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=NO_PERMIT, amount=30}]}
+> remove vehicle 3
+Vehicle with plate 3 was not parked in lot!
+Vehicle{plate=3, permit=null, parked=false, tickets=[Ticket{id=3, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=NO_PERMIT, amount=30}]}
+> remove vehicle 4
+Vehicle with plate 4 was removed from spot 44
+Vehicle{plate=4, permit=Permit{id=4, type=HANDICAPPED}, parked=false, tickets=[]}
+> remove vehicle 5
+Vehicle with plate 5 was removed from spot 42
+Vehicle{plate=5, permit=Permit{id=5, type=HANDICAPPED}, parked=false, tickets=[]}
+> remove vehicle 6
+Vehicle with plate 6 was removed from spot 57
+Vehicle{plate=6, permit=Permit{id=6, type=RESERVED}, parked=false, tickets=[]}
+> park vehicle 3 spot 1
+Vehicle 3 is parked illegaly! Vehicle permit is null and parking spot is HANDICAPPED
+> patrol lot
+Issuing ticket to: Vehicle{plate=3, permit=null, parked=true, tickets=[Ticket{id=3, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=NO_PERMIT, amount=30}, Ticket{id=4, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=PARKING_HANDICAPPED, amount=100}]} in spot 1 for PARKING_HANDICAPPED
+> display lot
+00:H 01:* 02:H 03:H 04:R 05:R 06:R 07:R 08:R 09:R
+10:R 11:R 12:R 13:R 14:R 15:R 16:R 17:R 18:R 19:R
+20:R 21:R 22:R 23:R 24:R 25:R 26:R 27:R 28:R 29:R
+30:G 31:G 32:G 33:G 34:G 35:G 36:G 37:G 38:G 39:G
+40:G 41:G 42:G 43:G 44:G 45:G 46:G 47:G 48:G 49:G
+50:G 51:G 52:G 53:G 54:G 55:G 56:G 57:G 58:G 59:G
+60:G 61:G 62:G 63:G 64:G 65:G 66:G 67:G 68:G 69:G
+70:G 71:G 72:G 73:G 74:G 75:G 76:G 77:G 78:G 79:G
+80:G 81:G 82:G 83:G 84:G 85:G 86:G 87:G 88:G 89:G
+90:G 91:G 92:G 93:G 94:G 95:G 96:G 97:G 98:G 99:G
+Vacant Spots: 99
+> display vehicles
+Vehicle{plate=0, permit=Permit{id=0, type=RESERVED}, parked=false, tickets=[Ticket{id=1, time=Tue Feb 07 00:39:09 EST 2017, plate=0, fine=PARKING_HANDICAPPED, amount=100}]}
+Vehicle{plate=1, permit=Permit{id=1, type=HANDICAPPED}, parked=false, tickets=[]}
+Vehicle{plate=2, permit=null, parked=false, tickets=[Ticket{id=2, time=Tue Feb 07 00:39:09 EST 2017, plate=2, fine=PARKING_RESERVED, amount=50}]}
+Vehicle{plate=3, permit=null, parked=true, tickets=[Ticket{id=3, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=NO_PERMIT, amount=30}, Ticket{id=4, time=Tue Feb 07 00:39:09 EST 2017, plate=3, fine=PARKING_HANDICAPPED, amount=100}]}
+Vehicle{plate=4, permit=Permit{id=4, type=HANDICAPPED}, parked=false, tickets=[]}
+Vehicle{plate=5, permit=Permit{id=5, type=HANDICAPPED}, parked=false, tickets=[]}
+Vehicle{plate=6, permit=Permit{id=6, type=RESERVED}, parked=false, tickets=[]}
+> garbage
+Unrecognized command: garbage
+> quit
